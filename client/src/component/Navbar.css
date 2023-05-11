@@ -1,0 +1,15 @@
+.logo img{
+    width: 100px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+ul li a span {
+    color:black;
+    font-weight: 500;
+    
+  }
+ul li a span:hover {
+    color:#089da1; 
+  }
+
