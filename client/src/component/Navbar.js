@@ -54,13 +54,18 @@ function Navbar({CartItem}) {
                 class="dropdown-menu dd"
                 aria-labelledby="dropdownMenuButton1"
               >
+              <li>
+                  <Link to="/admin" class="dropdown-item">
+                  <i class="fa fa-user" style={{color:"#089da1"}} ></i>   Admin 
+                  </Link>
+                </li>
                 <li>
-                  <Link to="/login" class="dropdown-item">
+                  <Link to="/login" class="dropdown-item ml-3">
                  Login 
                   </Link>
                 </li>
                 <li>
-                  <Link to="/" onClick={()=>sessionStorage.clear()}  class="dropdown-item" href=".">
+                  <Link to="/" onClick={()=>sessionStorage.clear()}  class="dropdown-item ml-3" href=".">
                   Logout
                   </Link>
                 </li>

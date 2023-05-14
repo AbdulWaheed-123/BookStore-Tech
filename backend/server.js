@@ -1,10 +1,7 @@
 const express = require("express");
 const app = express();
-
 const form = require("./routes/form");
-
 const ship=require("./routes/Ship")
-
 
 const PORT =4000
 // const fileUpload = require("express-fileupload");

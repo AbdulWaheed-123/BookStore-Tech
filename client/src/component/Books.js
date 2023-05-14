@@ -4,7 +4,7 @@ import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-function Books({data,book,onAdd}) {
+function Books({data,fetchApi,book,onAdd}) {
   const navigate=useNavigate()
   const customToastStyle = {
     backgroundColor: 'black',
@@ -26,13 +26,14 @@ function Books({data,book,onAdd}) {
   }
   useEffect(()=>{
     getSessiondata()
+    fetchApi()
 },[])
   
   return (
     <>
    {sessiondata==null?(navigate("/login")):(  
 
-  <div className="text-center container py-4">
+  <div className="text-center container py-4" style={{marginTop:"100px"}}>
   <h1 className='font-weight-bold display-6 text-center fw-bold'>Books</h1>
     <div className="row">
 {data.map((item)=>(

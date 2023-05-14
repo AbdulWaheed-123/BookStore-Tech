@@ -93,8 +93,11 @@ function Form() {
 	return (
 		<div className="conatiner-fluid mt-5">
 		<h2 className="text-info display-4 text-center" style={{marginTop:"120px"}}>Welcome to Admin Panel</h2>
-			<div>
-				<form onSubmit={submitForm}>
+		<h3 className="text-info display-6 text-center">Add New Books</h3>
+			
+	<div className="container">
+<div className="col-md-6 col-12 col-12 offset-3">
+<form onSubmit={submitForm}>
 					<div>
 						<label>Enter Your Book Name</label>
 						<input
@@ -105,6 +108,7 @@ function Form() {
 							className="px-5 py-2 border border-black m-2"
 						/>
 					</div>
+
 					<div>
 						<label>Enter Your Book Description</label>
 						<input
@@ -115,9 +119,9 @@ function Form() {
 							className="px-5 py-2 border border-black m-2"
 						/>
 					</div>
-					
+
 					<div>
-						<label>Enter Your Price</label>
+						<label>Enter Book Price</label>
 						<input
 							type="text"
 							name="price"
@@ -126,6 +130,7 @@ function Form() {
 							className="px-5 py-2 border border-black m-2"
 						/>
 					</div>
+
 					<div>
 						<label>Upload picture</label>
 						<input
@@ -142,9 +147,14 @@ function Form() {
 						Add Book
 					</button>
 				</form>
-			</div>
+
+</div>
+	
+				</div>
+
 			<div>
-				<table className="table table-responsive ">
+
+				<table className="table table-responsive mt-5">
 					<tbody>
 						<tr>
 							<th className="px-5 py-2 border border-black">Id</th>
@@ -194,20 +204,25 @@ function Form() {
 						})}
 					</tbody>
 				</table>
+
 			</div>
 
 <div>
+
+
+
 <h2 className="text-info display-4 text-center" style={{marginTop:"120px"}}>User Shippment Details</h2>
 			
-<div>
-				<table className="table table-responsive">
+<div className="container">
+<div className="col-md-12 ">
+				<table className="table table-responsive table-hover mt-5">
 					<tbody>
 						<tr>
 							<th className="px-5 py-2 border border-black">Id</th>
 							<th className="px-5 py-2 border border-black">Name</th>
-							<th className="px-5 py-2 border border-black">Description</th>
-							<th className="px-5 py-2 border border-black">Price</th>
-							<th className="px-5 py-2 border border-black">Images</th>
+							<th className="px-5 py-2 border border-black">Address</th>
+							<th className="px-5 py-2 border border-black">City</th>
+							<th className="px-5 py-2 border border-black">Country</th>
 						</tr>
 						{data.map((item) => {
 							return (
@@ -233,7 +248,9 @@ function Form() {
 						})}
 					</tbody>
 				</table>
-			</div>
+		</div>
+		
+	</div>
 
 
 </div>

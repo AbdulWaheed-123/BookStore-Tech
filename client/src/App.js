@@ -88,12 +88,12 @@ else{
 Local(CartItem)
 }
 
-useEffect(() => {
-  const savedCart = JSON.parse(localStorage.getItem("CartItem"));
-  if (savedCart) {
-    setCartItem(savedCart);
-  }
-},[]);
+// useEffect(() => {
+//   const savedCart = JSON.parse(localStorage.getItem("CartItem"));
+//   if (savedCart) {
+//     setCartItem(savedCart);
+//   }
+// },[]);
 
   return (
     <div className="App">
@@ -106,7 +106,7 @@ useEffect(() => {
 <Route path="/" element={<Header/>} />
 <Route path="/admin" element={<Form/>} />
 <Route path="/about" element={<About/>} />
-<Route path="/books" element={<Books  data={data} onAdd={onAdd}/>} />
+<Route path="/books" element={<Books fetchApi={fetchApi}  data={data} onAdd={onAdd}/>} />
 <Route path="/cart" element={<Cart CartItem={CartItem} del={del}  onAdd={onAdd} onRemove={onRemove} />} />
 <Route path="/services" element={<Services/>} />
 <Route path="/reviews" element={<Reviews/>} />
