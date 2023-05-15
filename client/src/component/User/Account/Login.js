@@ -94,7 +94,7 @@ else{
   <i class="fa fa-lock ml-1 mt-2 text-info"></i>
    </div>
    
-   <input class="form-control ml-2" onChange={loginhandle} placeholder="Enter your password" name="password" type="text"/>
+   <input class="form-control ml-2" onChange={loginhandle} placeholder="Enter your password" name="password" type="password"/>
   </div>
 
 
